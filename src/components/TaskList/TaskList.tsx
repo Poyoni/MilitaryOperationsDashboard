@@ -6,7 +6,7 @@ interface TaskListProps {
   onReload: () => void;
 }
 
-function TaskList({ tasks, onReload }: TaskListProps) {
+const TaskList: React.FC<TaskListProps> = ({ tasks, onReload }: TaskListProps) => {
   return (
     <div className="task-list">
       {tasks.map(task => (

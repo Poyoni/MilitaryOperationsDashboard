@@ -6,7 +6,7 @@ interface TaskItemProps {
   onReload: () => void;
 }
 
-function TaskItem({ task, onReload }: TaskItemProps) {
+const TaskItem: React.FC<TaskItemProps> = ({ task, onReload }: TaskItemProps) => {
   const handleStatusChange = async () => {
     try {
       await updateTaskStatus(task._id!); 

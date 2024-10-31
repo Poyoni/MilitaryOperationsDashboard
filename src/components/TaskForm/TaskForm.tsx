@@ -5,7 +5,7 @@ interface TaskFormProps {
   onAddTask: (task: Task) => void;
 }
 
-function TaskForm({ onAddTask }: TaskFormProps) {
+const TaskForm: React.FC<TaskFormProps> = ({ onAddTask }: TaskFormProps) => {
   const [name, setName] = useState('');
   const [status, setStatus] = useState('Pending');
   const [priority, setPriority] = useState('Low');
